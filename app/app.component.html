@@ -1,0 +1,35 @@
+<!-- esboço do layout -->
+
+<div class="m-3">
+  <div class="tab-content">
+    <!-- tabela e tipo de tabela -->
+
+    <div id="lista" class="container tab-pane active">
+
+      <!-- classe, estilom cor e fonte do título da lista -->
+      <div style="text-align:center; background-color:ghostwhite; font-family:'Lucida Sans'">
+        <h3> Alunos da Uninter (Polo Madureira) </h3>
+
+        <!-- o cabeçalho da tabela -->
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="colu">RU</th>
+              <th scope="colu">Nome</th>
+              <th scope="colu">Curso</th>
+              <th scope="colu">Data de Nascimento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let alunos of alunos_lista">
+              <!-- utilizando a estrutura ngfor para percorrer os elementos contidos e amostrar no html -->
+              <th scope="row"> {{alunos.RU}}</th>
+              <!--dados da tabela -->
+              <td> {{alunos.Nome}} </td>
+              <td> {{alunos.Curso}} </td>
+              <td> {{alunos.Data_Nascimento}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
